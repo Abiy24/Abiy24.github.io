@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content= "width=device-width, initial-scale=1.0">
+	<title>Survey Form using HTML and CSS</title>
+	<style>
+
+		/* Styling the Body element i.e. Color, Font, Alignment */
+		body {
+			background-color: gold;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: whitesmoke;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input, textarea */
+		.form-control input,
+		.form-control textarea {
+			border: 1px solid grey;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: gold;
+			border: 1px solid grey;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 21px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Customer Satisfaction Survey</h1>
+
+	<form action="" class="container">
+
+		<div class="form-control">
+			<label for="name">Name</label>
+			<input type="text" name="name" id="name" placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="email">Email</label>
+			<input type="email" name="email" id="email" placeholder="Enter your email" />
+		</div>
+
+		<div class="form-control">
+			<label for="age">Age</label>
+			<input type="text" name="age" id="age" placeholder="Enter your age" />
+		</div>
+
+		<div class="form-control">
+			<label for="gender">Gender</label>
+			<input type="radio" name="gender" id="gender" value="Man" >Man</input>
+			<input type="radio" name="gender" id="gender" value="Woman">Woman</input>
+		</div>
+
+		<div class="form-control">
+			<label for="product">Product that you liked<small>(Check all that apply)</small></label>
+			<input type="checkbox" name="product" id="product" value="Coca-cola" />Coca-cola
+			<br/>
+			<input type="checkbox" name="product" id="product" value="Sprite">Sprite</input>
+			<br/>
+			<input type="checkbox" name="product" id="product" value="Fanta">Fanta</input>
+			<br/>
+			<input type="checkbox" name="product" id="product" value="Buavita">Buavita</input>
+			<br/>
+			<input type="checkbox" name="product" id="product" value="YOU.C1000">YOU.C1000</input>
+			<br/>
+			<input type="checkbox" name="product" id="product" value="Minute Maid Juice Pulpy">Minute Maid Juice Pulpy</input>
+			<br/>
+			<input type="checkbox" name="product" id="product" value="Teh Pucuk Harum">Teh Pucuk Harum</input>
+		</div>
+
+        <div class="form-control">
+			<label for="satisfactory">Do you like our Product so far?</label>
+			<input type="radio" name="satisfactory" id="satisfactory" value="Yes" >Yes</input>
+			<input type="radio" name="satisfactory" id="satisfactory" value="No" >No</input>
+		</div>
+
+        <div class="form-control">
+			<label for="rate" id="label-rate">Please Rate Our Product!</label>
+			<input type="text" name="rate" id="rate" placeholder="Rate from 1 - 10" />
+		</div>
+
+		<div class="form-control">
+			<label for="comment">Please give your comments or suggestions!</label>
+			<textarea type="text" name="comment" id="comment" placeholder="Enter your comment here"></textarea>
+		</div>
+		<button type="submit" value="submit" onclick="getData()">Submit</button>
+	</form>
+</body>
+
+<script>
+    function getData() {
+        var name = document.getElementById("name").value;
+		var email = document.getElementById("email").value;
+		var age = document.getElementById("age").value;
+		var gender = document.querySelector("input[name=gender]:checked").value;
+		var product = document.getElementsByName("product");
+		var listProduct = ''
+		var satisfactory = document.getElementById("satisfactory").value;
+		var rate = document.getElementById("rate").value;
+		var comment = document.getElementsByName("comment").value
+
+		for(var product2 of product) {
+			if(product2.checked) {
+				listProduct += ', '+ product2.value
+			}
+		}
+
+		listProduct = listProduct.substring(1)
+
+		alert( "Thanks for completing the survey. This is your Data:" +
+        "\n" +
+        "\nName : " + name +
+        "\nEmail : " + email +
+        "\nAge : " + age +
+        "\nGender : " + gender +
+        "\nProduct that you liked : " + listProduct +
+        "\nDo you like our Product : " + satisfactory +
+        "\nPlease Rate Our Product! : " + rate +
+		"\nComments or Suggestions : " + comment
+    );
+    }
+
+</script>
+</html>

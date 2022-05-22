@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Multimedia & Embedding</title>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#default" class="logo">Yoru (よる)</a>
+        <div class="header-right">
+          <a class="active" href="#home">Home</a>
+          <a href="./LoginPage.html">Login</a>
+          <a href="./SignUpPage.html">Sign Up</a>
+        </div>
+    </header>
+
+      <!-- Content -->
+      <div class="container">
+        <div class="col-md text-center">
+            <h1 style="padding-top: 50px; padding-bottom: 20px;">Picture, Video, Audio Testing Page</h1>
+        </div>
+        <div class="col-md text-center">
+            <h1 id="nama"></h1>
+        </div>
+        <div class="col-md text-center">
+            <h2 onclick="alert('This alert pops up everytime NIM is clicked')" style="padding-bottom: 50px;">20180140090</h2>
+        </div>
+      </div>
+      <div class="topright">
+        <p id="tanggal"></p>
+      </div>
+
+      <!-- Picture, Video, Audio -->
+      <picture>
+          <source media="(max-width: 600px)" srcset="./MediaSource/Nian.jpg">
+          <source media="(max-width: 1250px)" srcset="./MediaSource/Nian.jpg">
+          <img src="./MediaSource/Nian.jpg" class="center"
+          title="Nian, Arknights Character">
+      </picture>
+
+      <iframe
+      style="width: 700px; height: 500px; padding-top: 50px; padding-bottom: 50px;"
+      class="center"
+      src="https://www.youtube.com/embed/GXyKCBIN_o0"
+      title="YouTube video player"
+      frameborder="0"
+      allowfullscreen
+      ></iframe>
+
+      <audio controls class="center">
+        <source src="./MediaSource/Longmenbar.mp3" type="audio/mpeg">
+        <source src="./MediaSource/Longmenbar.ogg" type="audio/ogg">
+        <p>
+          Your browser doesn't support HTML5 audio.
+          Here is a <a href="./MediaSource/Longmenbar.mp3">link to download the audio
+          </a> instead.
+        </p>
+      </audio>
+    
+    <!-- Footer -->
+    <footer class="footer-1">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 pr-md-5">
+            <a href="#" class="footer-site-logo d-block mb-4">Yoru (よる)</a>
+            <p>"Yoru" which means "Night" in Japanese is My favorite word.</p>
+          </div>
+          <div class="col-md">
+            <ul class="list-unstyled nav-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Me</a></li>
+              <li><a href="#">My Portfolio</a></li>
+              <li><a href="#">My Services</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <ul class="list-unstyled nav-links">
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Testimonials</a></li>
+              <li><a href="#">My Journal</a></li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <ul class="list-unstyled nav-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms &amp; Conditions</a></li>
+              <li><a href="#">Partners</a></li>
+            </ul>
+          </div>
+          <div class="col-md text-md-center">
+            <ul class="social list-unstyled">
+            <p class=""><a href="./ContactMePage.html" class="btn btn-tertiary">Contact Me</a></p>
+          </div>
+        </div> 
+
+        <div class="row ">
+          <div class="col-12 text-center">
+            <div class="copyright mt-2 pt-2">
+              <p><small>&copy; 1998-2022 All Rights Reserved.</small></p>
+            </div>
+          </div>
+        </div> 
+      </div>  
+
+    </footer>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
+  </body>
+</html>
