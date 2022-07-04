@@ -16,64 +16,72 @@
 
     <!-- Header -->
     <header class="header">
-        <a href="./PVA.TestingPage.html" class="logo">Yoru (よる)</a>
+        <a href="" class="logo">Yoru (よる)</a>
         <div class="header-right">
           <a class="active" href="#home">Home</a>
           <a href="./LoginPage.html">Login</a>
-          <a href="./SignUpPage.html">Sign Up</a>
         </div>
     </header>
 
       <!-- Content -->
       <div class="container">
-        <!-- <div class="col-md text-center">
-            <h1 style="padding-top: 150px; padding-bottom: 50px;">HTML TAG & HYPERLINK</h1>
-        </div> -->
         <div class="col-md text-center">
             <h1 style="padding-top: 50px;" id="nama"></h1>
         </div>
         <div class="col-md text-center">
             <h2 onclick="alert('This alert pops up everytime NIM is clicked')">20180140090</h2>
         </div>
-        <!-- <div class="col-md text-center">
-            <button onclick="alert('This is an alert onclick! used in html file');" class="btn">Alert using html only</button>
-        </div>
-        <div class="col-md text-center">
-            <button onclick="halo()" class="btn">Alert using Function in JS</button>
-        </div> -->
       </div>
       <div class="topright">
         <p id="tanggal"></p>
       </div>
       
-      <div class="col-md text-md-center">
-        <p class=""><a href="./PVA.TestingPage.html" class="btn btn-tertiary">PVA Testing Page</a></p>
-      </div>
+      <!-- Picture, Video, Audio -->
+      <picture>
+        <source media="(max-width: 600px)" srcset="./MediaSource/Nian.jpg">
+        <source media="(max-width: 1250px)" srcset="./MediaSource/Nian.jpg">
+        <img src="./MediaSource/Nian.jpg" class="center"
+        title="Nian, Arknights Character">
+      </picture>
+
+      <iframe
+      style="width: 700px; height: 500px; padding-top: 50px; padding-bottom: 50px;"
+      class="center"
+      src="https://www.youtube.com/embed/GXyKCBIN_o0"
+      title="YouTube video player"
+      frameborder="0"
+      allowfullscreen
+      ></iframe>
+
+      <audio controls class="center">
+        <source src="./MediaSource/Longmenbar.mp3" type="audio/mpeg">
+        <source src="./MediaSource/Longmenbar.ogg" type="audio/ogg">
+        <p>
+          Your browser doesn't support HTML5 audio.
+          Here is a <a href="./MediaSource/Longmenbar.mp3">link to download the audio
+          </a> instead.
+        </p>
+      </audio>
     
     <!-- Footer -->
     <footer class="footer-1">
-
       <div class="container">
         <div class="row">
           <div class="col-md-4 pr-md-5">
-            <a href="./PVA.TestingPage.html" class="footer-site-logo d-block mb-4">Yoru (よる)</a>
+            <a href="" class="footer-site-logo d-block mb-4">Yoru (よる)</a>
             <p>"Yoru" which means "Night" in Japanese is My favorite word.</p>
           </div>
           <div class="col-md">
             <ul class="list-unstyled nav-links">
-              <li><a href="#">Home</a></li>
+              <li><a href="GamePage.html">Game</a></li>
               <li><a href="#">About Me</a></li>
               <li><a href="#">My Portfolio</a></li>
-              <li><a href="#">My Services</a></li>
-              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <div class="col-md">
             <ul class="list-unstyled nav-links">
-              <li><a href="#">Clients</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Career</a></li>
-              <li><a href="#">Testimonials</a></li>
               <li><a href="#">My Journal</a></li>
             </ul>
           </div>
@@ -98,7 +106,6 @@
           </div>
         </div> 
       </div>  
-
     </footer>
 
     <!-- Script -->

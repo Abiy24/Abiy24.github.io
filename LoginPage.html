@@ -15,47 +15,98 @@
   <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <a href="#default" class="logo">Yoru (よる)</a>
         <div class="header-right">
           <a href="./index.html">Home</a>
           <a class="active" href=".#login">Login</a>
-          <a href="./SignUpPage.html">Sign Up</a>
         </div>
     </header>
 
       <!-- Content -->
-      <div class="container">
-        <ul class="list-group flush" style="align-items: center;">
-          <li class="list-group item" style="font-size: 70px;">Under Construction!</li>
-          <li class="list-group item" style="font-size: 50px;">Come Back For More!</li>
-        </ul>
-      </div>
+
+      <section class="vh-100">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-6 text-black">
+      
+              <div class="px-5 ms-xl-4">
+                <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+              </div>
+      
+              <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+      
+                <form style="width: 23rem;">
+      
+                  <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+      
+                  <div class="form-outline mb-4">
+                    <input type="email" id="form2Example18" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example18">Email address</label>
+                  </div>
+      
+                  <div class="form-outline mb-4">
+                    <input type="password" id="form2Example28" class="form-control form-control-lg" />
+                    <label class="form-label" for="form2Example28">Password</label>
+                  </div>
+      
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-info btn-lg btn-block" type="button">Login</button>
+                  </div>
+      
+                  <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                  <p>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+      
+                </form>
+      
+              </div>
+      
+            </div>
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+              <img src="./MediaSource/chen.jpg"
+                class="w-100 vh-100" 
+                style="object-fit: cover; object-position: left;">
+            </div>
+            <!-- Slider -->
+            <!-- <div class="col-sm-6 px-0 d-none d-sm-block" id="slider">
+              <ul id="slideWrap"> 
+                <li><img class="w-100 vh-100" style="object-fit: cover; object-position: left;" 
+                  src="./MediaSource/chen.jpg" alt=""></li>
+                <li><img class="w-100 vh-100" style="object-fit: cover; object-position: left;"
+                  src="./MediaSource/ash.jpg" alt=""></li>
+                <li><img class="w-100 vh-100" style="object-fit: cover; object-position: left;"
+                  src="./MediaSource/hoshi.jpg" alt=""></li>
+                <li><img class="w-100 vh-100" style="object-fit: cover; object-position: left;"
+                  src="./MediaSource/skad.jpg" alt=""></li>
+                <li><img class="w-100 vh-100" style="object-fit: cover; object-position: left;"
+                  src="./MediaSource/red.jpg" alt=""></li>
+              </ul>
+              <a id="prev" href="#">&#8810;</a>
+              <a id="next" href="#">&#8811;</a>
+            </div> -->
+          </div>
+        </div>
+      </section>
     
     <!-- Footer -->
     <footer class="footer-1">
-
       <div class="container">
         <div class="row">
           <div class="col-md-4 pr-md-5">
-            <a href="#" class="footer-site-logo d-block mb-4">Yoru (よる)</a>
+            <a href="" class="footer-site-logo d-block mb-4">Yoru (よる)</a>
             <p>"Yoru" which means "Night" in Japanese is My favorite word.</p>
           </div>
           <div class="col-md">
             <ul class="list-unstyled nav-links">
-              <li><a href="#">Home</a></li>
+              <li><a href="GamePage.html">Game</a></li>
               <li><a href="#">About Me</a></li>
               <li><a href="#">My Portfolio</a></li>
-              <li><a href="#">My Services</a></li>
-              <li><a href="#">Contact</a></li>
             </ul>
           </div>
           <div class="col-md">
             <ul class="list-unstyled nav-links">
-              <li><a href="#">Clients</a></li>
               <li><a href="#">Team</a></li>
               <li><a href="#">Career</a></li>
-              <li><a href="#">Testimonials</a></li>
               <li><a href="#">My Journal</a></li>
             </ul>
           </div>
@@ -80,7 +131,6 @@
           </div>
         </div> 
       </div>  
-
     </footer>
 
     <!-- Script -->
